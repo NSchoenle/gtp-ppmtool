@@ -3,7 +3,7 @@ package com.yash.ppmtoolapp.dao;
 import java.util.List;
 
 import com.yash.ppmtoolapp.domain.Project;
-import com.yash.ppmtoolapp.exception.*;
+//import com.yash.ppmtoolapp.exception.*;
 /**
  * This ContactDAO interface will provide the CRUD operations on Contact
  * 
