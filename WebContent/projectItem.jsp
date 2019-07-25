@@ -25,16 +25,23 @@
                                                 <i class="fa fa-flag-checkered pr-1">Project Board </i>
                                             </li>
                                         </a>
+                                        
+                                        <c:if test="${user.role != 3}">
                                         <a href="./UpdateProjectController?id=${project.id }">
                                             <li class="list-group-item update">
                                                 <i class="fa fa-edit pr-1">Update Project Info</i>
                                             </li>
                                         </a>
+                                        </c:if>
+                                        
+                                        <c:if test="${user.role == 1}">
                                         <a href="./DeleteProjectController?id=${project.id}">
                                             <li class="list-group-item delete">
                                                 <i class="fa fa-minus-circle pr-1">Delete Project</i>
                                             </li>
                                         </a>
+                                        </c:if>
+                                        
                                     </ul>
                                 </div>
                             </div>

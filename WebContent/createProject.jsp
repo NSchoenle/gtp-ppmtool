@@ -38,9 +38,13 @@
                             <input type="text" name="project_name" class="form-control form-control-lg " placeholder="Project Name" />
                         </div>
                         <div class="form-group">
-                            <input type="text" name="project_Identifier" class="form-control form-control-lg" placeholder="Unique Project ID"
-                                 />
+                            <input type="text" name="project_Identifier" class="form-control form-control-lg" placeholder="Unique Project ID"/>
                         </div>
+                        
+                   		<div class="form-group">
+                            <input type="text" name="manager_id" value="${project.manager_id }" class="form-control form-control-lg " placeholder="Manager ID" />
+                        </div>
+                        
                         <!-- disabled for Edit Only!! remove "disabled" for the Create operation -->
                         <div class="form-group">
                             <textarea  name ="description" class="form-control form-control-lg" placeholder="Project Description"></textarea>
