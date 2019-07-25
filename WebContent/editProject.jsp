@@ -33,7 +33,7 @@
                 <div class="col-md-8 m-auto">
                     <h5 class="display-4 text-center">Edit ${project.project_name }</h5>
                     <hr />
-                    ${project.project_name } 1
+                    ${project.project_name } 
                     <form action="./EditProjectController" method="post">
                     	<div class="form-group">
                     		<input type="hidden" name="id" value="${project.id}" class="form-control form-control-lg">
@@ -46,9 +46,9 @@
                                  />
                         </div>
                         
-                        <div class="form-group">
+                       <div class="form-group">
                             <input type="text" name="manager_id" value="${project.manager_id }" class="form-control form-control-lg " placeholder="Manager ID" />
-                        </div>
+                       </div> 
                         
                         
                         <!-- disabled for Edit Only!! remove "disabled" for the Create operation -->
