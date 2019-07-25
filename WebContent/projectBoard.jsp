@@ -42,7 +42,7 @@
                             <h3>TO DO</h3>
                         </div>
                     </div>
-				<jsp:include page="taskItem.jsp"/>
+				<jsp:include page="projectTaskItem.jsp"/>
                     
                 </div>
                 <div class="col-md-4">
