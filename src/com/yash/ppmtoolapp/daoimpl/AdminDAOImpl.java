@@ -16,7 +16,7 @@ public class AdminDAOImpl extends JDBCUtil implements AdminDAO {
 	public void createProject(Project p) {
 		
 		
-		String sql = "Insert into project(project_id, project_name) values(?,?)";
+		String sql = "Insert into project(id, name) values(?,?)";
 		
 		PreparedStatement pstmt = createPreparedStatement(sql);
 		
