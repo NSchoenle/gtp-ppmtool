@@ -18,8 +18,6 @@ public interface ProjectTaskDAO {
 	void deleteProjectTask(int id);
 	
 	
-	
-	
 	ProjectTask findProjectTaskById(int id);
 	
 	
