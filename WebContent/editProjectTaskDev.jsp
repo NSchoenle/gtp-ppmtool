@@ -1,29 +1,4 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-
-
-
-    <link rel="stylesheet" href="App.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-
-    <title>Kanban Tool</title>
-</head>
-<!-- Spring Boot / React Students please ignore above -->
-
-<body>
-
-	<jsp:include page="navbar.jsp"/>
     
     <!-- CREATE / UPDATE PROJECT TASK FORM STARTS HERE -->
 
@@ -35,21 +10,26 @@
                     <a href="#" class="btn btn-light">
                         Back to Project Board
                     </a>
-                    <h4 class="display-4 text-center">Add /Update Project Task</h4>
-                    <p class="lead text-center">Project Name + Project Code</p>
+                    <h4 class="display-4 text-center">Update: ${projectTask.name }</h4>
+                    <p class="lead text-center">Project: ${project.project_name } - Project ID: ${project.project_Identifier }</p>
                     <form onSubmit={this.onSubmit}>
                         <div class="form-group">
                             <input type="text" class="form-control form-control-lg" name="summary" placeholder="Project Task summary" />
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control form-control-lg" placeholder="Acceptance Criteria" name="acceptanceCriteria"></textarea>
+                            <textarea class="form-control form-control-lg" readonly="readonly" placeholder="Acceptance Criteria" name="acceptanceCriteria"></textarea>
                         </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" readonly="readonly" name="developer" placeholder="Developer ID" />
+                        </div>
+                        
                         <h6>Due Date</h6>
                         <div class="form-group">
-                            <input type="date" class="form-control form-control-lg" name="dueDate" />
+                            <input type="date" class="form-control form-control-lg" readonly="readonly" name="dueDate" />
                         </div>
                         <div class="form-group">
-                            <select class="form-control form-control-lg" name="priority">
+                            <select class="form-control form-control-lg" name="priority" disabled>
                                 <option value={0}>Select Priority</option>
                                 <option value={1}>High</option>
                                 <option value={2}>Medium</option>
@@ -76,9 +56,3 @@
     <!-- CREATE / UPDATE PROJECT TASK FORM ENDS HERE -->
 
 
-    <!-- Spring Boot / React Students please ignore below -->
-
-	<jsp:include page="commonjsplib.jsp"/>
-</body>
-
-</html>
