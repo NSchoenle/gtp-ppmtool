@@ -20,6 +20,7 @@ public class ProjectServiceImpl implements ProjectService {
 		projectDAO.save(project);
 	}
 
+	//class
 	@Override
 	public void updateProject(Project project) {
 		projectDAO.update(project);

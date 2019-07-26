@@ -38,3 +38,5 @@ public interface ProjectService {
 	 */
 	List<Project> getAllProjects();
 }
+
+//interface

@@ -11,7 +11,7 @@ public interface ProjectTaskService {
 	void updateProjectTask(ProjectTask p);
 	ProjectTask getProjectTask(int id);
 	List <ProjectTask> getAllProjectTasks();
-	
+	//interface
 	
 	
 
