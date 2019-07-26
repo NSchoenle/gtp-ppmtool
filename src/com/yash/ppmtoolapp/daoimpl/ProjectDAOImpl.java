@@ -71,7 +71,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 			//throw new UserIDException("Id not found");
 		}
 		
-		releaseResources();
+		//releaseResources();
 		
 	}
 
