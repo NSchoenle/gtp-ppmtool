@@ -59,10 +59,10 @@
 
                         <div class="form-group">
                             <select class="form-control form-control-lg" name="status">
-                                <option value="">Select Status</option>
-                                <option value="TO_DO">TO DO</option>
-                                <option value="IN_PROGRESS">IN PROGRESS</option>
-                                <option value="DONE">DONE</option>
+                                <option value={0}>Select Status</option>
+                                <option value={1}>TO DO</option>
+                                <option value={2}>IN PROGRESS</option>
+                                <option value={3}>DONE</option>
                             </select>
                         </div>
 
