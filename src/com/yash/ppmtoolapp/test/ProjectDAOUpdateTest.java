@@ -1,6 +1,7 @@
 package com.yash.ppmtoolapp.test;
 
-import com.sun.istack.internal.logging.Logger;
+import org.apache.log4j.*;
+
 import com.yash.ppmtoolapp.dao.ProjectDAO;
 import com.yash.ppmtoolapp.daoimpl.ProjectDAOImpl;
 import com.yash.ppmtoolapp.domain.Project;
