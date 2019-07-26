@@ -16,7 +16,9 @@ public class JDBCUtil {
 
 		
 	// The constants
+
 		private static final String URL = "jdbc:mysql://localhost/ppmtoolappdb";
+
 		private static final String TIMEZONEFIX = "?useTimezone=true&serverTimezone=UTC";
 		private static final String USER = "root";
 		private static final String PASS = "P@ssword1";
