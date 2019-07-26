@@ -47,9 +47,10 @@
                 <div class="col-md-12">
                     <h1 class="display-4 text-center">Projects</h1>
                     <br />
+                    <c:if test="${user.role == 1}">
                     <a href="createProject.jsp" class="btn btn-lg btn-info">
                         Create a Project
-                    </a>
+                    </a></c:if>
                     <br />
                     
                     <hr />
