@@ -8,8 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.yash.ppmtoolapp.domain.Project;
+import com.yash.ppmtoolapp.domain.ProjectTask;
 import com.yash.ppmtoolapp.service.ProjectService;
+import com.yash.ppmtoolapp.service.ProjectTaskService;
 import com.yash.ppmtoolapp.serviceimpl.ProjectServiceImpl;
+import com.yash.ppmtoolapp.serviceimpl.ProjectTaskServiceImpl;
 
 /**
  * Servlet implementation class EditProjectController
@@ -29,9 +32,12 @@ public class EditProjectTaskController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//Take input from form
-				Long id = Long.parseLong(request.getParameter("id"));
-				Project task = new ProjectTask();
-				task.setId(id);
+				//Long id = Long.parseLong(request.getParameter("id"));
+				int id = Integer.parseInt(request.getParameter("id"));
+				ProjectTask task = new ProjectTask();
+				task.setProject_task_id(id);
+				
+				
 //				task.setProjectTask_name(request.getParameter("project_name"));
 //				task.setProjectTask_Identifier(request.getParameter("project_Identifier"));
 //				task.setDescription(request.getParameter("description"));

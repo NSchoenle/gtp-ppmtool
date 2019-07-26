@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.yash.ppmtoolapp.domain.Project;
 import com.yash.ppmtoolapp.domain.ProjectTask;
+import com.yash.ppmtoolapp.service.ProjectTaskService;
+import com.yash.ppmtoolapp.serviceimpl.ProjectTaskServiceImpl;
 
 /**
  * Servlet implementation class AddProjectTaskController
@@ -29,7 +31,9 @@ public class AddProjectTaskController extends HttpServlet {
 		ProjectTask projectTask = new ProjectTask();
 	//	
 		projectTask.setDescription(request.getParameter("summary"));
+		
 		projectTask.setAcceptanceCriteria(request.getParameter("acceptanceCriteria"));
+		
 		projectTask.setPriority((Integer.parseInt(request.getParameter("priority"))));
 		
 //		project.setStart_date(request.getParameter("start_date"));

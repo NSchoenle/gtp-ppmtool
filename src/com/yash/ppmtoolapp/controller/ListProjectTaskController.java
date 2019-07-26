@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.yash.ppmtoolapp.domain.Project;
+import com.yash.ppmtoolapp.domain.ProjectTask;
+import com.yash.ppmtoolapp.service.ProjectTaskService;
+import com.yash.ppmtoolapp.serviceimpl.ProjectTaskServiceImpl;
 
 /**
  * Servlet implementation class ListProjectTaskController
@@ -33,7 +36,7 @@ public class ListProjectTaskController extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Project> tasks = projectTaskService.getAllTasks();
+		List<ProjectTask> tasks = projectTaskService.getAllProjectTasks();
 		
 		//Share the list with the resquest
 		request.setAttribute("tasks", tasks); //Might need 3 attributes filtered by the status

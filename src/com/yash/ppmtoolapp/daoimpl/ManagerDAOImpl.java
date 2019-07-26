@@ -29,7 +29,7 @@ public class ManagerDAOImpl extends JDBCUtil implements ManagerDAO {
 	@Override
 	public void deleteTask(ProjectTask p) {
 	
-		String sql = "Delete from project_task WHERE id = " + p.getId();
+		String sql = "Delete from project_task WHERE id = " + p.getProject_task_id();//getId();
 		
 		PreparedStatement pstmt = createPreparedStatement(sql);
 		
@@ -45,7 +45,7 @@ public class ManagerDAOImpl extends JDBCUtil implements ManagerDAO {
 	@Override
 	public void updateTask(ProjectTask p) {
 		
-		int id = p.getId();
+		int id = p.getProject_task_id(); //p.getId();
 		
 		String whereStmt = "WHERE id =" + id + ";";
 		String sql = "Update project_task set priority = '" + p.getPriority() + "'" + whereStmt;

@@ -10,10 +10,12 @@ public class DeveloperDAOImpl extends JDBCUtil implements DeveloperDAO {
 
 	@Override
 	public void updateProjectTask(ProjectTask p) {
-		int id = p.getId();
+		int id = p.getProject_task_id();//getId();
 		String whereStmt = "WHERE id = " + id + ";";
 		
-		String sql = "Update project_task set status = '" + p.getStatus() + "'" +", summary='"+p.getSummary()+"'"+ whereStmt;
+		String sql = "Update project_task set status = '" + p.getStatus() + "'" +", summary='"+
+						//p.getSummary()
+						p.getDescription()+"'"+ whereStmt;
 		
 		
 		pstmt = createPreparedStatement(sql);
