@@ -16,10 +16,12 @@ public class JDBCUtil {
 
 		
 	// The constants
-		private static final String URL = "jdbc:mysql://localhost/ppmtooldb"; //Update to match new DB
+
+		private static final String URL = "jdbc:mysql://localhost/ppmtoolappdb";
+
 		private static final String TIMEZONEFIX = "?useTimezone=true&serverTimezone=UTC";
 		private static final String USER = "root";
-		private static final String PASS = "root";
+		private static final String PASS = "P@ssword1";
 		// The connection
 		protected Connection con = null;
 
