@@ -4,33 +4,26 @@ import java.util.Date;
 
 public class ProjectTask {
 	
-	private int project_task_id;
+	private int id;
 	
 	private int project_id;
 	
-	
-	private Date start_date;
-	
-	private int priority;
+	private String priority;
 	
 	private String status;
 	
-	private String description;
+	private String summary;
 	
-	private Date end_date;
+	private Date due_date;
 	
-	
-	private int duration;
-	
-	private String project_task_name;
-	
-	
-	public int getProject_task_id() {
-		return project_task_id;
+	private String acceptance_criteria;
+
+	public int getId() {
+		return id;
 	}
 
-	public void setProject_task_id(int project_task_id) {
-		this.project_task_id = project_task_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getProject_id() {
@@ -41,19 +34,11 @@ public class ProjectTask {
 		this.project_id = project_id;
 	}
 
-	public Date getStart_date() {
-		return start_date;
-	}
-
-	public void setStart_date(Date start_date) {
-		this.start_date = start_date;
-	}
-
-	public int getPriority() {
+	public String getPriority() {
 		return priority;
 	}
 
-	public void setPriority(int priority) {
+	public void setPriority(String priority) {
 		this.priority = priority;
 	}
 
@@ -65,45 +50,41 @@ public class ProjectTask {
 		this.status = status;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getSummary() {
+		return summary;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
-	public Date getEnd_date() {
-		return end_date;
+	public Date getDue_date() {
+		return due_date;
 	}
 
-	public void setEnd_date(Date end_date) {
-		this.end_date = end_date;
+	public void setDue_date(Date due_date) {
+		this.due_date = due_date;
 	}
 
-	public int getDuration() {
-		return duration;
+	public String getAcceptance_criteria() {
+		return acceptance_criteria;
 	}
 
-	public void setDuration(int duration) {
-		this.duration = duration;
-	}
-
-	public String getProject_task_name() {
-		return project_task_name;
-	}
-
-	public void setProject_task_name(String project_task_name) {
-		this.project_task_name = project_task_name;
+	public void setAcceptance_criteria(String acceptance_criteria) {
+		this.acceptance_criteria = acceptance_criteria;
 	}
 
 	@Override
 	public String toString() {
-		return "ProjectTask [project_task_id=" + project_task_id + ", project_id=" + project_id + ", start_date="
-				+ start_date + ", priority=" + priority + ", status=" + status + ", description=" + description
-				+ ", end_date=" + end_date + ", duration=" + duration + ", project_task_name=" + project_task_name
+		return "ProjectTask [id=" + id + ", project_id=" + project_id + ", priority=" + priority + ", status=" + status
+				+ ", summary=" + summary + ", due_date=" + due_date + ", acceptance_criteria=" + acceptance_criteria
 				+ "]";
 	}
+	
+	
+	
+	
+
 	
 	
 

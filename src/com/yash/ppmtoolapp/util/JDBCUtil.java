@@ -16,10 +16,10 @@ public class JDBCUtil {
 
 		
 	// The constants
-		private static final String URL = "jdbc:mysql://localhost/ppmtoolappdb";
+		private static final String URL = "jdbc:mysql://gtp-2019-ppmtoolapp.cop25g5tba8w.us-east-2.rds.amazonaws.com/ppmtoolappdb";
 		private static final String TIMEZONEFIX = "?useTimezone=true&serverTimezone=UTC";
-		private static final String USER = "root";
-		private static final String PASS = "P@ssword1";
+		private static final String USER = "group3";
+		private static final String PASS = "group3group3";
 		// The connection
 		protected Connection con = null;
 

@@ -18,7 +18,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 	@Override
 	public void save(Project project) {
 		String sql = "INSERT INTO " +
-					"projects(project_name, description, project_Identifier)" + 
+					"project(name, description, project_Identifier)" + 
 					"VALUES(?,?,?)";
 		PreparedStatement pstmt = createPreparedStatement(sql);
 		try {
@@ -38,7 +38,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 	@Override
 	public void update(Project project) {
 		Long id = project.getId();
-		String whereStmt = "WHERE id=" + id + ";";
+		String whereStmt = "WHERE project_id=" + id + ";";
 		
 		//TODO: FIX THIS SQL STATEMENT TO DEAL WITH NON-REQUIRED FIELDS 
 		String sql = "UPDATE projects SET project_name='" + project.getProject_name()+ "' "
@@ -61,7 +61,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 
 	@Override
 	public void delete(Long id) {
-		String sql = "DELETE FROM projects WHERE id="+id;
+		String sql = "DELETE FROM projects WHERE project_id="+id;
 		
 		PreparedStatement pstmt = createPreparedStatement(sql);
 		
@@ -77,7 +77,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 
 	@Override
 	public void delete(Project project) {
-		String sql = "DELETE FROM projects WHERE id="+project.getId();
+		String sql = "DELETE FROM projects WHERE project_id="+project.getId();
 		
 		PreparedStatement pstmt = createPreparedStatement(sql);
 		
@@ -95,7 +95,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 	public Project findById(Long id) {
 		Project ret = null;
 		
-		String sql = "SELECT * from projects WHERE id =" + id;
+		String sql = "SELECT * from projects WHERE project_id =" + id;
 		try {
 			
 			PreparedStatement pstmt = createPreparedStatement(sql);
@@ -105,7 +105,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 			// Advance the ResultSet pointer to the first object if there is one
 			if (rs.next()) { 
 				ret =new Project();
-				ret.setId(rs.getLong("id"));
+				ret.setId(rs.getLong("project_id"));
 				ret.setProject_name(rs.getString("project_name"));
 				ret.setDescription(rs.getString("description"));
 				ret.setProject_Identifier(rs.getString("project_Identifier"));
@@ -137,7 +137,7 @@ public class ProjectDAOImpl extends JDBCUtil implements ProjectDAO {
 			// MAPPING from resultset to contact list
 			while (rs.next()) {
 				project = new Project();
-				project.setId(rs.getLong("id"));
+				project.setId(rs.getLong("project_id"));
 				project.setProject_name(rs.getString("project_name"));
 				project.setDescription(rs.getString("description"));
 				project.setProject_Identifier(rs.getString("project_Identifier"));

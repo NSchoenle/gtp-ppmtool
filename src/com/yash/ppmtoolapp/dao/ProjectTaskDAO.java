@@ -7,9 +7,7 @@ import com.yash.ppmtoolapp.domain.ProjectTask;
 public interface ProjectTaskDAO {
 	
 	void saveProjectTask(ProjectTask p);
-	
-	
-	void deleteProjectTask(ProjectTask p);
+
 	
 	
 	void updateProjectTask(ProjectTask p);
@@ -17,6 +15,7 @@ public interface ProjectTaskDAO {
 	
 	void deleteProjectTask(int id);
 	
+	void deleteProjectTask(ProjectTask p);
 	
 	
 	
