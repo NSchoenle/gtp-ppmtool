@@ -17,7 +17,7 @@ import com.yash.ppmtoolapp.serviceimpl.ProjectTaskServiceImpl;
 /**
  * Servlet implementation class UpdateProjectController
  */
-@WebServlet("/UpdateProjectController")
+@WebServlet("/UpdateProjectTaskController")
 public class UpdateProjectTaskController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ProjectTaskService projectTaskService = null;
